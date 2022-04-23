@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+.hide {
+  background-color: red;
+  background: red;
+}
+
+.awake {
+  opacity: 90%;
+  transition: opacity 1s ease-in-out;
+}
+
+.asleep {
+  opacity: 0%;
+  transition: opacity 4s ease-in-out 5s;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/c/c4/Rec8_3kc2p.jpg') no-repeat
+    center top/cover;
+
+  transition: opacity 5s ease-in-out;
+
+  /* transform: translateX(600px); */
+
+}
+
+.slide.current {
+  left:-600px;
+  opacity: 1;
+  transform: translateX(600px);
+  transition: transform 5s ease-out, opacity 5s ease-out;
+  
+}
+
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -0;
+  transition: opacity 5s ease;
+  opacity: 0;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 30px;
+  
+}
+
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  
+  /* transform: translateX(600px); */
+  transition: all 5s ease-in-out;
+  opacity: 100%;
+}
+
+.current-text {
+  opacity: 0%;
+  /* transform: translateX(600px); */
+  transition: opacity 1s ease-in-out;
+  
+}
+
+
+
+.buttons button#next {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+}
+
+.buttons button#pause {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+}
+
+/* .buttons button#gif {
+  position: relative;
+  top: 5%;
+  right: 20px;
+}
+
+.buttons button#info {
+  position: relative;
+  top: 10%;
+  right: 20px;
+} */
+
+.top-menu {
+  display: flex;
+  position: absolute;
+  top: 5%;
+  /* right: 20px; */
+  width: 100%;
+  background-color: DodgerBlue;
+  border:#333;
+  justify-content: space-around;
+}
+
+.buttons button.square-button {
+  /* color: red; */
+  border-radius: 0%;
+  position: relative;
+  top: 10%;
+  right: 0%;
+  /* margin-left: 1%; */
+}
+
+
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 23px 25px;
+  border-radius: 50%;
+  outline: none;
+}
+
+.buttons .pause-button {
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 33px 35px;
+  border-radius: 50%;
+  outline: none;
+}
+
+
+
+
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+#buttonSet:hover {
+  opacity: 100%;
+}
+
+.display {
+  background-color: rgb(255, 255, 255);
+  border: 3px solid black;
+  size: 100%;
+  position: absolute;
+  top: 30%;
+  left:20%;
+
+  margin: auto;
+
+  opacity: 0;
+  transition: opacity 5s ease;
+  
+  pointer-events: none; 
+
+}
+
+.display-message {
+  /* margin: 50px; */
+  padding:150px;
+  font-size: 3em;
+  color: black;
+}
+
+.display-trans {
+  opacity: 1;
+  transition: opacity 3s ease;
+}
+
+.greyed-out {
+  opacity: .3;
+}
+
+.inverted {
+  filter: invert(1);
+}
+
+
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
+
+
+/* Backgorund Images */
+
+.slide:first-child {
+
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Slideshow</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+  <link rel="stylesheet" href="files/style_slideshow.css" />
+  <!-- <script type="text/javascript" src="files/slideshow_info.js"></script> -->
+  <script type="text/javascript" src="files/slideshow_img_list.js"></script>
+  <script type="text/javascript" src="files/slideshow_img_gifs.js"></script>
+
+</head>
+
+<body id="bodyID">
+  <div class="slider">
+    <!-- SLIDE ONE SECTION -->
+    <div class="slide current" id="slideOneID"> 
+      <div class="content current-text" id="infoCard">
+        <h3 id="slideOne">
+          <script>
+
+          </script>
+        </h3>
+        <h1 id="slideTitle" style="display:inline">Diffusion-limited aggregation</h1>
+        <p id="blurb">
+          Diffusion-limited aggregation (DLA) is the process whereby particles undergoing a random walk due to Brownian
+          motion cluster together to form aggregates of such particles. This theory, proposed by T.A. Witten Jr. and
+          L.M. Sander in 1981, is applicable to aggregation in any system where diffusion is the primary means of
+          transport in the system. DLA can be observed in many systems such as electrodeposition, Hele-Shaw flow,
+          mineral deposits, and dielectric breakdown.
+        </p>
+      </div>
+    </div>
+    <!-- SLIDE TWO SECTION -->
+    <div class="slide" id="slideTwoID">
+      <div class="content" id="infoCard2">
+        <h3 id="slideTwo">
+          <script>
+
+          </script>
+        </h3>
+        <h1 id="slideTitle2" style="display:inline">blank</h1>
+        <p id="blurb2">
+          Diffusion-limited aggregation (DLA) is the process whereby particles undergoing a random walk due to Brownian
+          motion cluster together to form aggregates of such particles. This theory, proposed by T.A. Witten Jr. and
+          L.M. Sander in 1981, is applicable to aggregation in any system where diffusion is the primary means of
+          transport in the system. DLA can be observed in many systems such as electrodeposition, Hele-Shaw flow,
+          mineral deposits, and dielectric breakdown.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUTTON SECTION -->
+  <div class="buttons asleep" id="buttonSet">
+    <button id="pause" class="pause-button"><i id="pauseButton" class="fas fa-pause"></i></button>
+    <button id="prev" class="greyed-out"><i class="fa fa-chevron-left"></i></button>
+    <button id="next"><i class="fa fa-chevron-right"></i></button>
+    <div class="top-menu">
+      <button id="gif" class="square-button"><i id="gifButton">Enter Gif Only Mode</i></button>
+      <button id="info" class="square-button"><i id="infoButton">Hide Info Cards</i></button>
+      <button id="invert" class="square-button"><i id="invertButton">Invert Colors</i></button>
+      <button id="grey" class="square-button"><i id="greyButton">Greyscale</i></button>
+      <button id="alt" class="square-button"><i id="altButton">Enter Alt Mode</i></button>
+      <button id="title" class="square-button"><i id="titleButton">Info Title</i></button>
+      <button id="description" class="square-button"><i id="descriptionButton">Info Description</i></button>
+    </div>
+  </div>
+
+
+  <div class="display" id="displayBox">
+    <h2 class="display-message" id="boxText">
+      <script>
+
+      </script>
+    </h2>
+  </div>
+
+  <script src="files/slideshow.js"> articleInfo(); articleInfo2(); displayText()</script>
+</body>
+
+</html>
